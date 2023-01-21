@@ -1,0 +1,27 @@
+Panait Stefan-Andrei 332 CA
+
+
+In rezolvarea temei initial voiam sa fac cu un vector 3d apoi mi-am dat seama ca mai natural
+ar fi sa folosesc o structura in care sa am o matrice si sizeul liniei si coloanei.
+Astfel a fost mai usor sa retin sizeul, iar operatiile pe matrici deveneau cele mai generice.
+Initial creez 35 de spatii pentru matrici, iar apoi daca mai este nevoie realoc. Am incercat 
+sa adaug elemente de fiecare data cand aveam nevoie de mai mult (cate 1), dar nu stiu din ce cauza
+sau care era problema cand rulam testele manual mergeau dar pe checker luam segmentation fault.
+
+Explicare functii: L: Citesc matricea si verific daca este nevoie sa realoc vectorul meu.
+                   D: verific daca matricea pentru care vreau dimensiunile exista, si apoi
+                   printez dimensiunile salvate in structura.
+                   P: Verific daca exista matricea apoi o afisez
+                   T: Aloc o noua matrice in care fac transpusa, eliberez matricea initiala, pun noua matrice in vector.
+                   F: Eliberez matricea creez o noua lista de matrici in care adaug toate elementele in afara de cel pe care doresc sa 
+                   C: Aloc vectorii in care retin indicii liniilor si coloanelor pe care le pastrez si consturisec
+                   noua matrice.
+                   O: Bubble sort pe matrici in functie de suma elementelor matricilor. Interschimb matricile, lniile si coloanele.
+                   M: Creez un nou element din vectorul meu de structuri pe care urmeaza sa il returnez, in ultimul element
+                   din vectorul meu de structuri(matrici).
+                   R: Problema intampinata faptul ca la inceput returnam pe recursivitate, si pierdeam referintele
+                   si numai puteam sa dau free, dar apoi am modificant schimband direct.
+                   il sterg dupa care pun la loc in lista mea initiala si eliberez lista de care m-am ajutat.                  
+                   Q: Eliberez toate matricile alocate si apoi eliberez vectorul de structuri. Fac o recursivitate
+                   daca puterea este para inmultesc matricea cu puterea - 1 dupa care fac puterea / 2.
+                
